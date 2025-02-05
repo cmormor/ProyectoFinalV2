@@ -1,0 +1,4 @@
+a.btn:hover * {
+  color: white;
+  font-weight: bolder;
+}
