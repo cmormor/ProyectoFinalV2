@@ -66,34 +66,56 @@ export const FormularioEmpleado = ({ empleado, onGuardar, onCrear }) => {
     return (
         <div className="container mt-4">
             <div className="card shadow p-4">
-                <h2 className="mb-4 text-center text-primary">{empleado ? 'Editando Empleado' : 'Añade un nuevo Empleado'}</h2>
+                <h2 className="mb-4 text-center text-primary text-uppercase">{empleado ? 'Editando Empleado' : 'Añade un nuevo Empleado'}</h2>
+                <hr />
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
-                        <label className="form-label">Nombre:</label>
+                        <label className="form-label">
+                            <i className="bi bi-person-fill me-2"></i>
+                            Nombre:
+                        </label>
                         <input type="text" className="form-control" name="first_name" value={formData.first_name} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Apellido:</label>
+                        <label className="form-label">
+                            <i className="bi bi-person-fill me-2"></i>
+                            Apellido:
+                        </label>
                         <input type="text" className="form-control" name="last_name" value={formData.last_name} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Email:</label>
+                        <label className="form-label">
+                            <i className="bi bi-envelope-fill me-2"></i>
+                            Email:
+                        </label>
                         <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Dirección:</label>
+                        <label className="form-label">
+                            <i className="bi bi-house-fill me-2"></i>
+                            Dirección:
+                        </label>
                         <input type="text" className="form-control" name="address" value={formData.address} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Número de afiliación:</label>
+                        <label className="form-label">
+                            <i className="bi bi-newspaper me-2"></i>
+                            Número de Afiliación:
+                        </label>
                         <input type="number" className="form-control" name="nafiliacionss" value={formData.nafiliacionss} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Año de antigüedad:</label>
+                        <label className="form-label">
+                            <i className="bi bi-calendar-fill me-2"></i>
+                            Año de Antiguedad:
+                        </label>
                         <input type="number" className="form-control" name="antiguedad" value={formData.antiguedad} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Puesto:</label>
+                        <label className="form-label">
+                            <i className="bi bi-laptop me-2"></i>
+                            Puesto:
+                        </label>
                         <input type="text" className="form-control" name="job" value={formData.job} onChange={handleChange} required={!empleado} />
                     </div>
                     <div className="mt-4 d-flex justify-content-end gap-2">
