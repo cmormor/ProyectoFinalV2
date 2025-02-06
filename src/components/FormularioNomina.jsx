@@ -133,7 +133,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                     <div className="form-group mb-4">
                         <div className='d-flex'>
                             <i className="bi bi-person-square text-secondary fs-4 me-2"></i>
-                            <h3 className="text-secondary">Datos del Emisor (no editables)</h3>
+                            <h3 className="text-secondary text-uppercase">Datos del Emisor (no editables)</h3>
                         </div>
                         {plantillaEmisores && (
                             <select
@@ -171,7 +171,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                     <div className="form-group mb-4">
                         <div className='d-flex'>
                             <i className="bi bi-building text-secondary fs-4 me-2"></i>
-                            <h3 className="text-secondary">Datos del Receptor (no editables)</h3>
+                            <h3 className="text-secondary text-uppercase">Datos del Receptor (no editables)</h3>
                         </div>
                         {plantilla && (
                             <select
@@ -209,7 +209,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                     <div className="d-flex flex-column mb-4 gap-4">
                         <div className='d-flex'>
                             <i className="bi bi-file-bar-graph text-secondary fs-4 me-2"></i>
-                            <h3 className="text-secondary">Datos de la Nomina</h3>
+                            <h3 className="text-secondary text-uppercase">Datos de la Nomina</h3>
                         </div>
                         <label className="text-uppercase">
                             Método de Pago:
@@ -267,8 +267,8 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                             />
                         </label>
                     </div>
-                    <div className="d-flex mb-4">
-                        <h3 className="me-3 text-primary">Conceptos de la Nómina</h3>
+                    <div className="d-flex mb-4 w-100 justify-content-between align-items-center">
+                        <h3 className="me-3 text-secondary text-uppercase">Conceptos de la Nómina</h3>
                         <button
                             type="button"
                             className="btn btn-sm btn-success"
@@ -303,7 +303,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                                 placeholder="Importe"
                                 required
                             />
-                            <div className="d-flex justify-content-end mt-2">
+                            <div className="mt-2">
                                 <button
                                     type="button"
                                     className="btn btn-danger btn-sm mt-2"
