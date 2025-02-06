@@ -68,6 +68,7 @@ export const FormularioEmpleado = ({ empleado, onGuardar, onCrear }) => {
             <div className="card shadow p-4">
                 <h2 className="mb-4 text-center text-primary text-uppercase">{empleado ? 'Editando Empleado' : 'Añade un nuevo Empleado'}</h2>
                 <hr />
+                <h3 className='text-secondary text-uppercase mb-3'>Datos del empleado</h3>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label">

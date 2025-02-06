@@ -132,7 +132,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                     <hr />
                     <div className="form-group mb-4">
                         <div className='d-flex'>
-                            <i className="bi bi-person-square text-secondary fs-4 me-2"></i>
+                            <i className="bi bi-building text-secondary fs-4 me-2"></i>
                             <h3 className="text-secondary text-uppercase">Datos del Emisor (no editables)</h3>
                         </div>
                         {plantillaEmisores && (
@@ -170,7 +170,7 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                     </div>
                     <div className="form-group mb-4">
                         <div className='d-flex'>
-                            <i className="bi bi-building text-secondary fs-4 me-2"></i>
+                            <i className="bi bi-person-square text-secondary fs-4 me-2"></i>
                             <h3 className="text-secondary text-uppercase">Datos del Receptor (no editables)</h3>
                         </div>
                         {plantilla && (
@@ -267,8 +267,11 @@ export const FormularioNomina = ({ nomina, plantilla, plantillaEmisores, onGuard
                             />
                         </label>
                     </div>
-                    <div className="d-flex mb-4 w-100 justify-content-between align-items-center">
-                        <h3 className="me-3 text-secondary text-uppercase">Conceptos de la Nómina</h3>
+                    <div className=" form-group mb-4 d-flex mb-4 w-100 justify-content-between align-items-center">
+                        <div className='d-flex'>
+                            <i className="bi bi-file-earmark-medical-fill text-secondary fs-4 me-2"></i>
+                            <h3 className="text-secondary text-uppercase">Conceptos</h3>
+                        </div>
                         <button
                             type="button"
                             className="btn btn-sm btn-success"

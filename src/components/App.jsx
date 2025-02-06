@@ -131,97 +131,99 @@ export const App = () => {
         <Router>
             <h1 className="text-center my-5">
                 GESTIÓN DE USUARIOS
-                <pre className="bg-primary w-50 mx-auto">TechSolutions!</pre>
+                <p className="bg-primary w-50 mx-auto">TechSolutions!</p>
             </h1>
-            <Snackbar
-                open={open}
-                message={mensaje}
-                sx={{ p: 0 }}
-            >
-                <Alert
-                    startDecorator={<i className="bi bi-info-circle"></i>}
-                    variant="soft"
-                    color="primary"
-                    sx={{ width: '100%', fontSize: "1.25em" }}
+            <div className='font'>
+                <Snackbar
+                    open={open}
+                    message={mensaje}
+                    sx={{ p: 0 }}
                 >
-                    {mensaje}
-                </Alert>
-            </Snackbar>
-            <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <ListarEmpleado
-                            empleados={empleadosFiltrados}
-                            onEditar={seleccionarEmpleadoParaEdicion}
-                            onEliminar={eliminarEmpleado}
-                            buscar={<BuscarEmpleado empleados={empleados} onFiltrar={filtrarEmpleados} />}
-                            añadir={<MiBoton texto="Añadir Empleado" ruta="/crear" icono="person-fill ms-1" />}
-                            verNominas={<MiBoton texto="Ver Nóminas" ruta="/nominas" icono="file-earmark-text ms-1" />}
-                        />
-                    }
-                />
-                <Route
-                    path="/editar/:id"
-                    element={
-                        <FormularioEmpleado
-                            empleado={empleadoEnEdicion}
-                            onGuardar={guardarEmpleadoEditado}
-                            onCrear={agregarEmpleado}
-                        />
-                    }
-                />
-                <Route
-                    path="/crear"
-                    element={
-                        <FormularioEmpleado
-                            empleado={null}
-                            onGuardar={guardarEmpleadoEditado}
-                            onCrear={agregarEmpleado}
-                        />
-                    }
-                />
-                <Route
-                    path="/nominas"
-                    element={
-                        <ListarNomina
-                            nominas={nominasFiltradas}
-                            onEditar={seleccionarNominaParaEdicion}
-                            onEliminar={eliminarNomina}
-                            onBuscarEmpleado={buscarEmpleadoPorId}
-                            buscar={<BuscarNomina nominas={nominas} onFiltrar={filtrarNominas} onBuscar={buscarEmpleadoPorId} />}
-                            añadir={<MiBoton texto="Añadir Nomina" ruta="/crearNomina" icono="file-earmark-diff-fill ms-2" />}
-                            volver={<MiBoton texto="Volver" ruta="/" icono="arrow-left-circle ms-2" />}
-                            generarID={generarIdNominas}
-                        />
-                    }
-                />
-                <Route
-                    path="/editarNomina/:id"
-                    element={
-                        <FormularioNomina
-                            nomina={nominaEnEdicion}
-                            onGuardar={guardarNominaEditada}
-                            onCrear={agregarNomina}
-                            onBuscarEmpleado={buscarEmpleadoPorId}
-                            onBuscarEmisor={buscarEmisorPorCIF}
-                        />
-                    }
-                />
-                <Route
-                    path="/crearNomina"
-                    element={
-                        <FormularioNomina
-                            nomina={null}
-                            plantilla={empleados}
-                            plantillaEmisores={emisores}
-                            onGuardar={guardarNominaEditada}
-                            onCrear={agregarNomina}
-                            onBuscarEmpleado={buscarEmpleadoPorId}
-                        />
-                    }
-                />
-            </Routes>
+                    <Alert
+                        startDecorator={<i className="bi bi-info-circle"></i>}
+                        variant="soft"
+                        color="primary"
+                        sx={{ width: '100%', fontSize: "1.25em" }}
+                    >
+                        {mensaje}
+                    </Alert>
+                </Snackbar>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <ListarEmpleado
+                                empleados={empleadosFiltrados}
+                                onEditar={seleccionarEmpleadoParaEdicion}
+                                onEliminar={eliminarEmpleado}
+                                buscar={<BuscarEmpleado empleados={empleados} onFiltrar={filtrarEmpleados} />}
+                                añadir={<MiBoton texto="Añadir Empleado" ruta="/crear" icono="person-fill ms-1" />}
+                                verNominas={<MiBoton texto="Ver Nóminas" ruta="/nominas" icono="file-earmark-text ms-1" />}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/editar/:id"
+                        element={
+                            <FormularioEmpleado
+                                empleado={empleadoEnEdicion}
+                                onGuardar={guardarEmpleadoEditado}
+                                onCrear={agregarEmpleado}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/crear"
+                        element={
+                            <FormularioEmpleado
+                                empleado={null}
+                                onGuardar={guardarEmpleadoEditado}
+                                onCrear={agregarEmpleado}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/nominas"
+                        element={
+                            <ListarNomina
+                                nominas={nominasFiltradas}
+                                onEditar={seleccionarNominaParaEdicion}
+                                onEliminar={eliminarNomina}
+                                onBuscarEmpleado={buscarEmpleadoPorId}
+                                buscar={<BuscarNomina nominas={nominas} onFiltrar={filtrarNominas} onBuscar={buscarEmpleadoPorId} />}
+                                añadir={<MiBoton texto="Añadir Nomina" ruta="/crearNomina" icono="file-earmark-diff-fill ms-2" />}
+                                volver={<MiBoton texto="Volver" ruta="/" icono="arrow-left-circle ms-2" />}
+                                generarID={generarIdNominas}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/editarNomina/:id"
+                        element={
+                            <FormularioNomina
+                                nomina={nominaEnEdicion}
+                                onGuardar={guardarNominaEditada}
+                                onCrear={agregarNomina}
+                                onBuscarEmpleado={buscarEmpleadoPorId}
+                                onBuscarEmisor={buscarEmisorPorCIF}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/crearNomina"
+                        element={
+                            <FormularioNomina
+                                nomina={null}
+                                plantilla={empleados}
+                                plantillaEmisores={emisores}
+                                onGuardar={guardarNominaEditada}
+                                onCrear={agregarNomina}
+                                onBuscarEmpleado={buscarEmpleadoPorId}
+                            />
+                        }
+                    />
+                </Routes>
+            </div>
         </Router>
     );
 };
